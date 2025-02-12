@@ -1,5 +1,6 @@
 package team.aliens.dms.global.security
 
+import org.apache.http.protocol.HTTP
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.HttpMethod
@@ -222,6 +223,10 @@ class SecurityConfig(
                     .requestMatchers(HttpMethod.DELETE, "/volunteers/cancellation/{volunteer-id}").hasAuthority(STUDENT.name)
                     .requestMatchers(HttpMethod.GET, "/volunteers").hasAuthority(STUDENT.name)
                     .requestMatchers(HttpMethod.GET, "/volunteers/my/application").hasAuthority(STUDENT.name)
+
+                authorize
+                    // /vote
+                    .requestMatchers(HttpMethod.GET, "/vote/candidate-list/{requestDate}").hasAnyAuthority(MANAGER.name)
 
                 .anyRequest().denyAll()
             }
