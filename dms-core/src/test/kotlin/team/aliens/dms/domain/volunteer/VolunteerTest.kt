@@ -4,7 +4,6 @@ import io.kotest.assertions.throwables.shouldNotThrowAny
 import io.kotest.assertions.throwables.shouldThrow
 import io.kotest.core.spec.style.DescribeSpec
 import team.aliens.dms.domain.volunteer.exception.VolunteerApplicationAlreadyAssigned
-
 import team.aliens.dms.domain.volunteer.stub.createVolunteerApplicationStub
 
 class VolunteerTest : DescribeSpec({

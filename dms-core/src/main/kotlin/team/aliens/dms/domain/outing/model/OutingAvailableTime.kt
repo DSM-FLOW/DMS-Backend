@@ -41,12 +41,11 @@ data class OutingAvailableTime(
         newOutingTime: LocalTime,
         newArrivalTime: LocalTime
     ) {
-         if (
+        if (
             !(newArrivalTime <= this.outingTime || newOutingTime >= this.arrivalTime)
-         ) {
-             throw OutingAvailableTimeAlreadyExistsException
-         }
-
+        ) {
+            throw OutingAvailableTimeAlreadyExistsException
+        }
     }
 
     fun toggleEnabled(): OutingAvailableTime =

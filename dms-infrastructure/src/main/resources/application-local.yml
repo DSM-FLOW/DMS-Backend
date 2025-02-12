@@ -6,10 +6,10 @@ spring:
   datasource:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:dms}?useSSL=false&characterEncoding=UTF-8&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&tinyInt1isBit=false&rewriteBatchedStatements=true
     username: ${MYSQL_USERNAME:root}
-    password: ${MYSQL_PASSWORD:qaz}
+    password: ${MYSQL_PASSWORD:a1b2c3!!}
 
   data:
     redis:
       host: ${REDIS_HOST:localhost}
       port: ${REDIS_PORT:6379}
-      password: ${REDIS_PASSWORD:asdf}
+      password: ${REDIS_PASSWORD:1234}
