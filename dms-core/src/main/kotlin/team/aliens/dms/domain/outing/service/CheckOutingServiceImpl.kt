@@ -2,7 +2,6 @@ package team.aliens.dms.domain.outing.service
 
 import team.aliens.dms.common.annotation.Service
 import team.aliens.dms.domain.outing.exception.OutingApplicationAlreadyExistsException
-import team.aliens.dms.domain.outing.exception.OutingAvailableTimeAlreadyExistsException
 import team.aliens.dms.domain.outing.exception.OutingAvailableTimeMismatchException
 import team.aliens.dms.domain.outing.exception.OutingTypeAlreadyExistsException
 import team.aliens.dms.domain.outing.model.OutingType

@@ -10,7 +10,7 @@ import java.time.LocalDateTime
 @UseCase
 class CreateNoticeUseCase(
     private val userService: UserService,
-    private val noticeService: NoticeService
+    private val noticeService: NoticeService,
 ) {
 
     fun execute(title: String, content: String): NoticeIdResponse {

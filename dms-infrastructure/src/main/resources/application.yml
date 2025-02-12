@@ -82,3 +82,4 @@ logging:
 
 slack:
   url: ${SLACK_WEBHOOK_URL:https://hooks.slack.com/services/null/null/null}
+

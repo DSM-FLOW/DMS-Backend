@@ -8,6 +8,7 @@ import team.aliens.dms.domain.auth.spi.JwtPort
 import team.aliens.dms.domain.notification.model.DeviceToken
 import team.aliens.dms.domain.notification.service.NotificationService
 import team.aliens.dms.domain.school.service.SchoolService
+import team.aliens.dms.domain.school.spi.SchoolPort
 import team.aliens.dms.domain.user.service.UserService
 
 @UseCase
@@ -17,6 +18,7 @@ class SignInUseCase(
     private val schoolService: SchoolService,
     private val notificationService: NotificationService,
     private val jwtPort: JwtPort,
+    private val port: SchoolPort
 ) {
 
     fun execute(request: SignInRequest): TokenFeatureResponse {
@@ -27,6 +29,7 @@ class SignInUseCase(
         val tokenResponse = jwtPort.receiveToken(
             userId = user.id, authority = user.authority
         )
+
         val availableFeatures = schoolService.getAvailableFeaturesBySchoolId(user.schoolId)
 
         if (!request.deviceToken.isNullOrBlank()) {
